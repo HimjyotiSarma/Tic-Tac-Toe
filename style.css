@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Outline;
+  src: url('./assets/fonts/Outline.ttf');
+}
+body {
+  font-family: Outline, 'sans-serif';
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  width: 100%;
+  background-color: rgb(221, 208, 233);
+}
+header {
+  margin-bottom: 0;
+}
+header h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.game_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  height: 700px;
+  max-height: 80vh;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* padding: 50px; */
+}
+.cells_container {
+  font-size: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  height: 100%;
+  gap: 0;
+  border: none;
+  text-align: center;
+  z-index: 2;
+}
+.cell {
+  border: solid black 1px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player_status {
+  font-size: 4rem;
+  margin: 1rem 1.5rem;
+}
+button {
+  width: 100px;
+  height: 50px;
+  font-family: 'Kode Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: aquamarine;
+  box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  text-transform: uppercase;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 1025px) {
+  .cells_container {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
