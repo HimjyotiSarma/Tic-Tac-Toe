@@ -121,6 +121,6 @@ const GameController = (function () {
     resetData,
   }
 })()
-
+GameController.initialGameState()
 GameController.onClickPlay()
 GameController.resetData()
