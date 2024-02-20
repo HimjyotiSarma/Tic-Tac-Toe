@@ -6,6 +6,7 @@ const resetBtn = document.querySelector('.reset_btn')
 let Player = 'X'
 let Winner = null
 let Draw = false
+let gameDraw = false
 
 // Winning Condition
 
@@ -29,7 +30,9 @@ const GameController = (function () {
     Player = 'X'
     Winner = null
     Draw = false
-    window.location.reload()
+    gameDraw = false
+    PlayerStatus.textContent = `${Player}'s Turn`
+    // window.location.reload()
   }
   const changePlayer = (Player) => {
     let newPlayer
@@ -47,7 +50,7 @@ const GameController = (function () {
         cell.textContent = Player
         let CellContents = getAllContent()
         checkWinner(CellContents, Player)
-        let gameDraw = isGameDraw(CellContents, Winner)
+        gameDraw = isGameDraw(CellContents, Winner)
         console.log('Game Draw', gameDraw)
         if (!Winner && !gameDraw) {
           Player = changePlayer(Player)
